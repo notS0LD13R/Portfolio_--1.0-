@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Portfolio</title>
+
+        <style>
+            :root {
+                --clr-accent: #008080;
+            }
+            * {
+                box-sizing: border-box;
+                padding: 0;
+                margin: 0;
+                font-family: "Courier New", Courier, monospace;
+            }
+
+            .highlight {
+                background-color: var(--clr-accent);
+                color: white;
+            }
+            .flex {
+                display: flex;
+                justify-content: space-evenly;
+            }
+            .fade-in {
+                --delay: 1s;
+                opacity: 0;
+                animation: fade-in 0.5s ease-in var(--delay) forwards;
+            }
+            html::-webkit-scrollbar {
+                display: none;
+            }
+
+            body {
+                --pos: 10px 10px;
+                --size: 5%;
+                background-color: var(--clr-accent);
+                display: flex;
+                justify-content: center;
+                padding: 2.5rem 0rem;
+                background-image: radial-gradient(
+                    white 0% var(--size),
+                    transparent var(--size) 100%
+                );
+                background-size: 25px 25px;
+                background-position: var(--pos);
+            }
+
+            main {
+                width: min(650px, 100vw);
+                min-height: 100vh;
+                background-color: white;
+                box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.5);
+                padding: 2.5rem;
+            }
+            section {
+                padding: 1.5rem 0rem;
+                border-bottom: black 1.5px solid;
+            }
+            footer {
+                padding-top: 1.5rem;
+            }
+            h1 {
+                font-size: 3rem;
+            }
+            h2 {
+                font-size: 2rem;
+            }
+            p {
+                text-align: justify;
+            }
+            .name {
+                display: flex;
+                justify-content: space-between;
+            }
+            .name h1 {
+                display: flex;
+                flex-direction: column;
+            }
+            .name span {
+                font-size: 1rem;
+            }
+            .name img {
+                width: 200px;
+                aspect-ratio: 1;
+                object-fit: cover;
+
+                border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+                animation: blobing 20s ease-in-out infinite alternate;
+                outline: var(--clr-accent) 2.5px solid;
+                outline-offset: 5px;
+            }
+            .about {
+            }
+
+            @keyframes blobing {
+                0% {
+                    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+                }
+                33% {
+                    border-radius: 30% 70% 54% 46% / 30% 30% 70% 70%;
+                }
+                66% {
+                    border-radius: 51% 49% 22% 78% / 73% 74% 26% 27%;
+                }
+                100% {
+                    border-radius: 56% 44% 70% 30% / 67% 62% 38% 33%;
+                }
+            }
+            @keyframes fade-in {
+                0% {
+                    opacity: 0;
+                    transform: translateX(-1rem);
+                }
+                100% {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+            }
+        </style>
+    </head>
+    <body id="body">
+        <main>
+            <section class="name">
+                <h1 class="fade-in">
+                    Joel T <br />
+                    Vadakekalam
+                    <span class="fade-in">
+                        <u class="highlight">Data Science</u> BTech
+                        Student</span
+                    >
+                </h1>
+                <img
+                    src="https://www.joeltito.tech/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FLight_DP.39ef625b.webp&w=1200&q=75"
+                    alt="My Photo :)"
+                />
+            </section>
+            <section class="about">
+                <h2 class="fade-in">About</h2>
+                <p class="fade-in">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    <u class="highlight">Delectus</u> eaque doloribus
+                    voluptatumin praesentium fugiat non ut perferendis
+                    <u class="highlight">ducimus</u> nesciunt culpa assumenda,
+                    tenetur explicabo placeat?
+                </p>
+            </section>
+            <section class="hobbies">
+                <h2 class="fade-in">Hobbies</h2>
+                <div class="flex">
+                    <ul class="fade-in">
+                        <li>Lorem</li>
+                        <li>ipsum</li>
+                        <li>dolor</li>
+                    </ul>
+                    <ul class="fade-in">
+                        <li>sit</li>
+                        <li>amet</li>
+                        <li>consectetur</li>
+                    </ul>
+                    <ul class="fade-in">
+                        <li>adipisicing</li>
+                        <li>elit</li>
+                        <li>Cam</li>
+                    </ul>
+                </div>
+            </section>
+            <section class="skills">
+                <h2 class="fade-in">Skills</h2>
+                <details class="fade-in">
+                    <summary>Web Development</summary>
+                    <p>
+                        Web development involves designing and building websites
+                        and web applications, using languages like HTML, CSS,
+                        and JavaScript to create interactive and user-friendly
+                        online experiences.
+                    </p>
+                </details>
+                <details class="fade-in">
+                    <summary>Data Analytics</summary>
+                    <p>
+                        Data analytics is the process of examining large
+                        datasets to extract meaningful insights, patterns, and
+                        trends, using tools and techniques like data
+                        visualization, statistical analysis, and machine
+                        learning.
+                    </p>
+                </details>
+                <details class="fade-in">
+                    <summary>Project Management</summary>
+                    <p>
+                        Project management is the discipline of planning,
+                        executing, and controlling projects to achieve specific
+                        goals within scope, time, and budget constraints,
+                        ensuring successful completion and stakeholder
+                        satisfaction.
+                    </p>
+                </details>
+            </section>
+            <footer class="flex">
+                <a href="https://github.com/notS0LD13R" target="_blank"
+                    ><img
+                        alt="Github 142 SVG Vector Icon"
+                        width="25"
+                        height="25"
+                        decoding="async"
+                        data-nimg="1"
+                        src="https://www.svgrepo.com//show/512317/github-142.svg"
+                        style="
+                            color: transparent;
+                            width: 25px;
+                            height: 25px;
+                        " /></a
+                ><a
+                    href="https://www.linkedin.com/in/joeltv11111/"
+                    target="_blank"
+                    ><img
+                        alt="Linkedin SVG Vector Icon"
+                        width="25"
+                        height="25"
+                        decoding="async"
+                        data-nimg="1"
+                        style="color: transparent; width: 25px; height: 25px"
+                        src="https://www.svgrepo.com//show/521725/linkedin.svg" /></a
+                ><a href="mailto:joelsebin@gmail.com"
+                    ><img
+                        alt="Gmail SVG Vector Icon"
+                        width="25"
+                        height="25"
+                        decoding="async"
+                        data-nimg="1"
+                        style="color: transparent; width: 25px; height: 25px"
+                        src="https://www.svgrepo.com//show/330519/gmail.svg" /></a
+                ><a href="https://www.joeltito.tech/" target="_blank"
+                    ><img
+                        alt="Website Click SVG Vector Icon"
+                        fetchpriority="high"
+                        width="25"
+                        height="25"
+                        decoding="async"
+                        data-nimg="1"
+                        src="https://www.svgrepo.com//show/447845/website-click.svg"
+                        style="color: transparent; width: 25px; height: 25px"
+                /></a>
+            </footer>
+        </main>
+    </body>
+    <script defer>
+        // function normalizeSpeed(x, y) {
+        //     const speed = Math.sqrt(x * x + y * y);
+        //     return 5 + Math.min(2, speed / 4);
+        // }
+
+        document.documentElement.addEventListener("mousemove", (e) => {
+            const { screenX, screenY, movementX, movementY } = e;
+            const multiplier = 0.1;
+            body.style.setProperty(
+                "--pos",
+                `${screenX * multiplier}px ${screenY * multiplier}px`
+            );
+            // body.style.setProperty(
+            //     "--size",
+            //     `${normalizeSpeed(movementX, movementY)}%`
+            // );
+        });
+
+        let delay = 125;
+        Array.from(document.getElementsByClassName("fade-in")).forEach(
+            (elem) => {
+                elem.classList.add("active");
+                elem.style.setProperty("--delay", `${delay}ms`);
+                delay += 125;
+            }
+        );
+    </script>
+</html>
